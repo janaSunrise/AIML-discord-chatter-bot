@@ -41,6 +41,7 @@ class Bot(AutoShardedBot):
 
         # -- Start time config --
         self.start_time = datetime.utcnow()
+        self.last_reset_time = datetime.now()
 
         # -- AIML conf --
         self.aiml_kernel = aiml.Kernel()
