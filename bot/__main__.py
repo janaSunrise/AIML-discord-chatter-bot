@@ -5,6 +5,8 @@ import discord
 from bot import Bot, config
 
 TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_NAME = os.getenv("CHANNEL_NAME")
+
 PREFIX = config.COMMAND_PREFIX
 
 intents = discord.Intents.all()
@@ -12,6 +14,7 @@ intents.presences = False
 
 bot = Bot(
     version="0.0.1",
+    channel_name=CHANNEL_NAME,
     command_prefix=PREFIX,
     intents=intents,
     activity=discord.Game(name=f"Call me with {PREFIX}help"),

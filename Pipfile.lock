@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "13bafea9368ba4d05dea1dcff831eaa359cbe99466b247bf796d7a2720bf6f22"
+            "sha256": "eec4713bbe948c9376f15a90b9a4b31f7f2891c44b586b9f2012532e8cf43894"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -139,26 +139,26 @@
         },
         "discord-ext-menus": {
             "git": "https://github.com/Rapptz/discord-ext-menus",
-            "ref": "4429b564fd8f031deaccd60caa5be7320e248816"
+            "ref": "309c70222eec33acacb8c21bbb0fbe9bc57de661"
         },
         "discord.py": {
             "extras": [
                 "voice"
             ],
             "hashes": [
-                "sha256:3df148daf6fbcc7ab5b11042368a3cd5f7b730b62f09fb5d3cbceff59bcfbb12",
-                "sha256:ba8be99ff1b8c616f7b6dcb700460d0222b29d4c11048e74366954c465fdd05f"
+                "sha256:399b80d576a63fa901300e80080568e1d9cd9c21260ca622fd7145c0009278fa",
+                "sha256:82bc5e6325ab7557db9c466f638c98e18be03c330f56ad9bf4c18bdcf19faf55"
             ],
             "index": "pypi",
-            "version": "==1.6.0"
+            "version": "==1.7.1"
         },
         "humanize": {
             "hashes": [
-                "sha256:ab69004895689951b79f2ae4fdd6b8127ff0c180aff107856d5d98119a33f026",
-                "sha256:d47d80cd47c1511ed3e49ca5f10c82ed940ea020b45b49ab106ed77fa8bb9d22"
+                "sha256:6e04cdd75d66074c34ff93c30a2ad6d19d91202a65c1bd400b2edeedae399bda",
+                "sha256:c2ccaea7f8cbcd883ec420279d6e71ad20371bb36dbf5100b178d9756563289e"
             ],
             "index": "pypi",
-            "version": "==3.2.0"
+            "version": "==3.4.1"
         },
         "idna": {
             "hashes": [
@@ -177,7 +177,7 @@
         },
         "jishaku": {
             "git": "https://github.com/Gorialis/jishaku",
-            "ref": "1d7905a6984597176c1b7e3817c9f5c13934d29a"
+            "ref": "f18b40d39c1700e1739b799450b8dc4532c273a5"
         },
         "loguru": {
             "hashes": [
@@ -294,6 +294,13 @@
                 "sha256:f8851ab9041756003119368c1e6cd0b9c631f46d686b3904b18c0139f4419f80"
             ],
             "version": "==1.4.0"
+        },
+        "python-aiml": {
+            "hashes": [
+                "sha256:f6954da1888b529121fe66a8cb1352b383c8ecd31e2bd9442ea46a38824e08c8"
+            ],
+            "index": "pypi",
+            "version": "==0.9.3"
         },
         "six": {
             "hashes": [
