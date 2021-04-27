@@ -1,15 +1,14 @@
-import os
 import sys
 import typing as t
 from datetime import datetime
 
-import aiml
 import aiohttp
 import discord
 from discord.ext.commands import AutoShardedBot
 from loguru import logger
 
 from bot import config
+from bot.core.aiml_skill import AIMLSkill
 
 # -- Logger configuration --
 logger.configure(
@@ -44,10 +43,7 @@ class Bot(AutoShardedBot):
         self.last_reset_time = datetime.now()
 
         # -- AIML conf --
-        self.aiml_kernel = aiml.Kernel()
-        self.setup_aiml()
-
-        logger.info("AIML KERNEL STARTED!")
+        self.aiml_kernel = AIMLSkill("./bot/aiml")
 
         # -- Sessions config --
         self.session = None
@@ -60,15 +56,6 @@ class Bot(AutoShardedBot):
             return True
 
         return await super().is_owner(user)
-
-    def setup_aiml(self):
-        initial_dir = os.getcwd()
-        os.chdir("./bot")
-
-        self.aiml_kernel.setBotPredicate("name", "Mr Chatter")
-        self.aiml_kernel.bootstrap(learnFiles=["std-startup.xml"], commands=["LOAD AIML B"])
-
-        os.chdir(initial_dir)
 
     async def load_extensions(self) -> None:
         """Load all listed cogs."""

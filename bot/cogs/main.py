@@ -22,7 +22,9 @@ class Main(Cog):
         for character in ["/", "'", ".", "\\", "(", ")", '"', "\n", "@", "<", ">"]:
             text = text.replace(character, "")
 
-        response = self.bot.aiml_kernel.respond(text).replace("://", "").replace("@", "")
+        response = self.bot.aiml_kernel([text], [{'user_id': message.author.id}])
+        response = response[0][0].replace("://", "").replace("@", "")
+
         response = f"`{message.author.name}`: {response}"
 
         if len(response) > 1800:
@@ -42,8 +44,8 @@ class Main(Cog):
                 color=discord.Color.green()
             )
         )
-        self.bot.aiml_kernel.resetBrain()
-        self.bot.setup_aiml()
+        self.bot.aiml_kernel.kernel.resetBrain()
+        self.bot.aiml_kernel._load_scripts()
 
 
 def setup(bot) -> None:
