@@ -1,3 +1,3 @@
 # AIML Mr. Chatter bot
 
-A chatbot built using AIML module and Intent datasets
+> An intelligent chatbot built using AIML module and Intent datasets.
