@@ -77,7 +77,7 @@ class Bot(AutoShardedBot):
             self.initial_call = False
             await self.load_extensions()
 
-            logger.info("Bot is ready")
+            logger.info(f"Bot is ready | v{self.version}")
         else:
             logger.info("Bot connection reinitialized")
 

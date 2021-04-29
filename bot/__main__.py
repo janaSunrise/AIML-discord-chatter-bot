@@ -17,7 +17,7 @@ bot = Bot(
     channel_name=CHANNEL_NAME,
     command_prefix=PREFIX,
     intents=intents,
-    activity=discord.Game(name=f"Call me with {PREFIX}help"),
+    activity=discord.Game(name=f"Talk with me in #{CHANNEL_NAME} :)"),
     case_insensitive=True,
     owner_ids=config.devs,
     heartbeat_timeout=150.0,

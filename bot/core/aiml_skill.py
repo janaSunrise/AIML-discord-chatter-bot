@@ -22,10 +22,11 @@ class AIMLSkill:
 
         self.kernel = aiml.Kernel()
         self._load_scripts()
-        logger.info("AIML KERNEL STARTED!")
+
+        logger.info("AIML kernel initialized!")
 
     def _load_scripts(self) -> None:
-        all_files = sorted(self.path_to_aiml_scripts.rglob('*.*'))
+        all_files = sorted(self.path_to_aiml_scripts.rglob("*.*"))
         learned_files = []
 
         for each_file_path in all_files:
@@ -66,12 +67,10 @@ class AIMLSkill:
             if not state:
                 user_id = self._generate_user_id()
                 new_state = {'user_id': user_id}
-
             elif 'user_id' not in state:
                 new_state = state
                 user_id = self._generate_user_id()
                 new_state['user_id'] = self._generate_user_id()
-
             else:
                 new_state = state
                 user_id = new_state['user_id']
