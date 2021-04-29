@@ -21,6 +21,8 @@ class AIMLSkill:
         self.null_response = null_response
 
         self.kernel = aiml.Kernel()
+        self.kernel._verboseMode = False
+
         self._load_scripts()
 
         logger.info("AIML kernel initialized!")
