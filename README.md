@@ -3,7 +3,6 @@
 > An intelligent chatbot built using AIML module and Intent datasets.
 
 ## Installation and Usage
-
 ### Creating the bot on Discord
 
 1. Create bot on Discord's [bot portal](https://discord.com/developers/applications/)
@@ -41,6 +40,16 @@ values. Then, run `docker-compose --env-file .env up` after getting the project 
 This is a clean and neat way of hosting without using docker. You can follow this if docker doesn't work
 well on your system, or it doesn't support it. Containers are resource intensive, and your PC might not
 be able to do it, this is the perfect method to get started with the self-hosting.
+
+- Clone or fork the repository, whichever suits you better.
+- Install `pipenv`, a virtual env for python. Command: **`pip install pipenv`**
+- Create the virtual environment and prepare it for usage using `pipenv update`
+- Configure the environmental variables by renaming the `.env.example` file to `.env` with the respective 
+  values for it. If you're using heroku or other platforms that have option for external environmental
+  variables, use that instead of `.env`
+- Configure the options and settings available in `config.py` inside the Bot module, according to your
+  preferences.
+- Run the server using `pipenv run start`
 
 ### Usage
 Go to any channel in discord of any server where this bot is invited, Make a channel as specified in `.env`
