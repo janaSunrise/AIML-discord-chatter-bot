@@ -13,10 +13,9 @@
 6. Go to **OAuth2** and click bot, than add **Administrator** permissions
 7. You can follow the link that will appear to add the bot to your discord server
 
-
 ## Installation
 
-This is a guide to help you self host the Bot, and use it privately which simplifies the work, and allows you to have
+This is a guide to help you self host the bot, and use it on your own which simplifies the work, and allows you to have
 a bot for yourself.
 
 ## Docker
