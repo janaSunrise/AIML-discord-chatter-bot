@@ -51,8 +51,9 @@ be able to do it, this is the perfect method to get started with the self-hostin
 - Run the server using `pipenv run start`
 
 ### Usage
-Go to any channel in discord of any server where this bot is invited, Make a channel as specified in `.env`
-and Send a message there. The bot should respond automatically.
+
+Go to any channel in discord of any server where this bot is invited, Make a channel with the same exact name as 
+specified in `.env` and Send a message there. The bot should respond to the message sent.
 
 ## 🤝 Contributing
 
