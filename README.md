@@ -68,7 +68,7 @@ making the commit message.
 
 If you have various suggestions, questions or want to discuss things with our community, Join our discord server!
 
-[![Discord](https://discordapp.com/api/guilds/695008516590534758/widget.png?style=shield)](https://discord.gg/cSC5ZZwYGQ)
+[![Discord](https://discordapp.com/api/guilds/835940276869791816/widget.png?style=shield)](https://discord.gg/MKC4qna4Gz)
 
 ## Show your support
 
