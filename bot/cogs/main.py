@@ -22,7 +22,7 @@ class Main(Cog):
         for character in ["/", "'", ".", "\\", "(", ")", '"', "\n", "@", "<", ">"]:
             text = text.replace(character, "")
 
-        response = self.bot.aiml_kernel([text], [{'user_id': message.author.id}])
+        response = self.bot.aiml_kernel([text], [{"user_id": message.author.id}])
         response = response[0][0].replace("://", "").replace("@", "")
 
         response = f"`{message.author.name}`: {response}"
@@ -40,8 +40,7 @@ class Main(Cog):
         self.bot.last_reset_time = now
         await ctx.channel.send(
             embed=discord.Embed(
-                description="Resetting info",
-                color=discord.Color.green()
+                description="Resetting info", color=discord.Color.green()
             )
         )
         self.bot.aiml_kernel.kernel.resetBrain()

@@ -12,7 +12,7 @@ class AIMLSkill:
         path_to_aiml_scripts: str,
         positive_confidence: float = 0.7,
         null_response: str = "I don't know what to answer you",
-        null_confidence: float = 0.3
+        null_confidence: float = 0.3,
     ) -> None:
         self.path_to_aiml_scripts = Path(path_to_aiml_scripts).expanduser().resolve()
 
@@ -32,12 +32,14 @@ class AIMLSkill:
         learned_files = []
 
         for each_file_path in all_files:
-            if each_file_path.suffix in ['.aiml', '.xml']:
+            if each_file_path.suffix in [".aiml", ".xml"]:
                 self.kernel.learn(str(each_file_path))
                 learned_files.append(each_file_path)
 
         if not learned_files:
-            logger.warning(f"No .aiml or .xml files found for AIML Kernel in directory {self.path_to_aiml_scripts}")
+            logger.warning(
+                f"No .aiml or .xml files found for AIML Kernel in directory {self.path_to_aiml_scripts}"
+            )
 
     def process_step(self, utterance_str: str, user_id: any) -> t.Tuple[str, float]:
         response = self.kernel.respond(utterance_str, sessionID=user_id)
@@ -55,9 +57,7 @@ class AIMLSkill:
         return uuid.uuid1().hex
 
     def __call__(
-            self,
-            utterances_batch: t.List[str],
-            states_batch: t.Optional[t.List] = None
+        self, utterances_batch: t.List[str], states_batch: t.Optional[t.List] = None
     ) -> t.Tuple[t.List[str], t.List[float], list]:
         output_states_batch = []
         user_ids = []
@@ -68,14 +68,14 @@ class AIMLSkill:
         for state in states_batch:
             if not state:
                 user_id = self._generate_user_id()
-                new_state = {'user_id': user_id}
-            elif 'user_id' not in state:
+                new_state = {"user_id": user_id}
+            elif "user_id" not in state:
                 new_state = state
                 user_id = self._generate_user_id()
-                new_state['user_id'] = self._generate_user_id()
+                new_state["user_id"] = self._generate_user_id()
             else:
                 new_state = state
-                user_id = new_state['user_id']
+                user_id = new_state["user_id"]
 
             user_ids.append(user_id)
             output_states_batch.append(new_state)
